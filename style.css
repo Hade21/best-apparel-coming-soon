@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+}
+
+.container {
+    background: url(./images/bg-pattern-desktop.svg);
+    position: relative;
+    background-position: left;
+    display: flex;
+    justify-content: stretch;
+}
+
+.logo {
+    position: absolute;
+    top: 3em;
+    left: 9.5em;
+    display: block;
+    width: fit-content;
+}
+
+.text {
+    width: 50%;
+    padding: 180px 150px;
+    overflow: hidden;
+}
+
+.text>h1>span {
+    color: hsl(0, 36%, 70%);
+    font-size: 1em;
+    font-weight: 300;
+    display: block;
+    width: fit-content;
+    letter-spacing: .3em;
+}
+
+.text>h1 {
+    font-size: 3em;
+    letter-spacing: .2em;
+    font-weight: 600;
+    color: hsl(0, 6%, 24%);
+}
+
+.desc {
+    display: block;
+    width: 80%;
+    color: hsl(0, 36%, 70%);
+    margin-top: 20px;
+    margin-bottom: 50px;
+    line-height: 28px;
+}
+
+input {
+    width: 65%;
+    padding: 12px 24px;
+    color: hsl(0, 36%, 70%);
+    opacity: .7;
+    border: 1px solid hsl(0, 36%, 70%);
+    border-radius: 50px;
+}
+
+input:focus {
+    border: 2px solid hsl(0, 93%, 68%);
+    outline: none;
+    padding: 11px 24px;
+}
+
+form {
+    position: relative;
+}
+
+form>img {
+    position: absolute;
+    padding: 16px 0;
+    right: 15em;
+    top: -0.4em;
+    display: none;
+}
+
+button {
+    position: absolute;
+    right: 8.5em;
+    padding: 10px 36px;
+    font-size: 15px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    box-shadow: 1px 10px 25px rgb(216, 213, 213);
+}
+
+form>img:hover {
+    background: linear-gradient(135deg, hsla(0, 80%, 86%, .5), hsla(0, 74%, 74%, .5));
+    box-shadow: 1px 10px 25px rgb(114, 114, 114);
+}
+
+.image {
+    background: url(./images/hero-desktop.jpg);
+    width: 50%;
+}
+
+@media (max-width:450px) {
+    .container {
+        flex-direction: column-reverse;
+    }
+    .image {
+        margin-top: 100px;
+        background: url(./images/hero-mobile.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 20rem;
+        width: 100%;
+    }
+    .logo {
+        top: 2em;
+        left: 2em;
+    }
+    .logo>img {
+        max-width: 130px;
+    }
+    .text {
+        width: fit-content;
+        margin: 0;
+        padding: 0;
+    }
+    .text {
+        margin-top: 80px;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    .text>h1>span {
+        text-align: center;
+        margin: 0 auto;
+    }
+    .desc {
+        margin: 20px auto;
+        width: 85%;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+    button {
+        right: 1.7em;
+        padding: 10px 24px;
+    }
+    input {
+        width: 75%;
+    }
+}
