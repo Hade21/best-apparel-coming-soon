@@ -11,6 +11,7 @@
     background-position: left;
     display: flex;
     justify-content: stretch;
+    margin-bottom: 50px;
 }
 
 .logo {
@@ -52,8 +53,8 @@
     line-height: 28px;
 }
 
-input {
-    width: 65%;
+#email {
+    width: calc(100% - 72px);
     padding: 12px 24px;
     color: hsl(0, 36%, 70%);
     opacity: .7;
@@ -61,27 +62,29 @@ input {
     border-radius: 50px;
 }
 
-input:focus {
+#email:focus {
     border: 2px solid hsl(0, 93%, 68%);
     outline: none;
     padding: 11px 24px;
 }
 
-form {
+.wrapper {
     position: relative;
+    width: 80%;
 }
 
-form>img {
+#error {
     position: absolute;
     padding: 16px 0;
-    right: 15em;
+    left: calc(100% - 124px);
     top: -0.4em;
     display: none;
 }
 
-button {
+#tombol {
     position: absolute;
-    right: 8.5em;
+    top: 0;
+    right: 0;
     padding: 10px 36px;
     font-size: 15px;
     border-radius: 50px;
@@ -91,14 +94,21 @@ button {
     box-shadow: 1px 10px 25px rgb(216, 213, 213);
 }
 
-form>img:hover {
-    background: linear-gradient(135deg, hsla(0, 80%, 86%, .5), hsla(0, 74%, 74%, .5));
-    box-shadow: 1px 10px 25px rgb(114, 114, 114);
+#tombol:hover {
+    background: linear-gradient(135deg, hsl(0, 81%, 94%), hsl(0, 95%, 86%));
+    box-shadow: 1px 10px 25px rgb(192, 192, 192);
 }
 
 .image {
     background: url(./images/hero-desktop.jpg);
     width: 50%;
+}
+
+.error-message {
+    font-size: 14px;
+    color: hsl(0, 36%, 70%);
+    margin-top: 10px;
+    margin-left: 24px;
 }
 
 @media (max-width:450px) {
@@ -140,11 +150,14 @@ form>img:hover {
         text-align: center;
         padding-bottom: 20px;
     }
-    button {
-        right: 1.7em;
+    .wrapper {
+        width: 85%;
+        margin: 0 auto;
+    }
+    #tombol {
         padding: 10px 24px;
     }
-    input {
-        width: 75%;
+    #error {
+        left: calc(100% - 96px);
     }
 }

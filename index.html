@@ -34,10 +34,13 @@
             <div class="text">
                 <h1 class="title"><span>WE'RE</span>COMING<br>SOON</h1>
                 <p class="desc">Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals.</p>
-                <form>
-                    <input type="email" placeholder="Email Address" id="email">
-                    <img src="./images/icon-error.svg"></img>
-                    <button type="submit" value="submit" id="tombol"><img src="./images/icon-arrow.svg" alt=""></button>
+                <form action="" onsubmit="return validasi(document.querySelector('#email'))">
+                    <div class="wrapper">
+                        <input type="text" placeholder="Email Address" id="email">
+                        <img src="./images/icon-error.svg" id="error"></img>
+                        <button type="submit" value="submit" id="tombol"><img src="./images/icon-arrow.svg" alt=""></button>
+                        <p class="error-message"></p>
+                    </div>
                 </form>
             </div>
             <div class="image"></div>
